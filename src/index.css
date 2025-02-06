@@ -11,8 +11,9 @@ Border/Muted Color 🔘 #6C757D → (Muted Gray) – Used for subtle dividers an
 
 @theme {
   --color-primaryColor: #ff014f;
-  --color-bgColor: #6c757d;
-  --color-textColor: #eeeeee;
+  --color-lightPrimaryColor: #ff5c8d;
+  --color-bgColor: #f5f5f5;
+  --color-textColor: #333333;
   --color-borderColor: #6c757d;
   /* fonts  */
   --font-dosis: "Dosis", "serif";
@@ -20,6 +21,7 @@ Border/Muted Color 🔘 #6C757D → (Muted Gray) – Used for subtle dividers an
   --font-chakra-petch: "Chakra Petch", "serif";
   --font-cormorant: "Cormorant", "serif";
 }
+
 /* 
 .primaryColor {
   color: #ff014f;

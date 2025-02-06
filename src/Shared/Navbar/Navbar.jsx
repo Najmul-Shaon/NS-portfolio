@@ -1,7 +1,66 @@
+import { Link, NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import { FaArrowDown } from "react-icons/fa";
+
 const Navbar = () => {
+  const navLinks = (
+    <>
+      <li>
+        <NavLink
+          to="/"
+          className="hover:bg-primaryColor hover:text-white text-lightPrimaryColor text-lg font-semibold"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="#about"
+          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="#skills"
+          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
+        >
+          Skill
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="#projects"
+          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
+        >
+          Projects
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="#contact"
+          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
+        >
+          Contact
+        </NavLink>
+      </li>
+    </>
+  );
+
+  const handleResume = () => {
+    const dwUrl =
+      "https://drive.google.com/uc?export=download&id=1zAzgBeG8yRvOR1N4jEMKoIPeIUz8it_A";
+
+    const link = document.createElement("a");
+    link.href = dwUrl;
+    link.download = "Resume of Najmul Shaon.pdf";
+    link.click();
+  };
+
   return (
-    <nav>
-      <div className="navbar bg-base-100 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full bg-bgColor shadow-md">
+      <div className="navbar max-w-screen-xl mx-auto px-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,52 +84,26 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          {/* site branding  */}
+          <div>
+            <Link to="/" className="text-2xl text-primaryColor font-bold">
+              &lt;Najmul/&gt;
+            </Link>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <Link
+            onClick={handleResume}
+            className="btn btn-sm bg-primaryColor rounded-2xl text-white border-borderColor"
+          >
+            <FaArrowDown></FaArrowDown> Resume
+          </Link>
         </div>
       </div>
     </nav>
