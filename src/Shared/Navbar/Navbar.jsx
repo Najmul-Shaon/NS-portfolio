@@ -13,33 +13,42 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
+
       <li>
         <NavLink
-          to="#about"
+          to="/portfolio"
+          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
+        >
+          Portfolio
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
           className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
         >
           About
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink
-          to="#skills"
+          to="/skills"
           className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
         >
           Skill
         </NavLink>
-      </li>
-      <li>
+      </li> */}
+      {/* <li>
         <NavLink
-          to="#projects"
+          to="/projects"
           className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
         >
           Projects
         </NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink
-          to="#contact"
+          to="/contact"
           className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
         >
           Contact

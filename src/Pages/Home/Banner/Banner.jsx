@@ -19,7 +19,7 @@ const Banner = () => {
     link.click();
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-screen-xl mx-auto px-4 text-start">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-screen-xl mx-auto px-4 text-start py-8">
       {/* banner content  */}
       <div className="order-2 md:order-none space-y-4">
         <div>
