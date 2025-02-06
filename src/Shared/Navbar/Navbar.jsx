@@ -100,9 +100,10 @@ const Navbar = () => {
         <div className="navbar-end">
           <Link
             onClick={handleResume}
-            className="btn btn-sm bg-primaryColor rounded-2xl text-white border-borderColor"
+            className="btn bg-primaryColor rounded-2xl text-white border-borderColor btn-sm md:btn-md"
           >
-            <FaArrowDown></FaArrowDown> Resume
+            <FaArrowDown className="text-lg"></FaArrowDown>{" "}
+            <span className="text-lg">Resume</span>
           </Link>
         </div>
       </div>

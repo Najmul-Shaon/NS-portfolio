@@ -10,8 +10,8 @@ Background Color ⚫ #121212 → (Dark Grayish Black) – Provides a sleek, mode
 Border/Muted Color 🔘 #6C757D → (Muted Gray) – Used for subtle dividers and secondary text. */
 
 @theme {
-  --color-primaryColor: #ff014f;
-  --color-lightPrimaryColor: #ff5c8d;
+  --color-primaryColor: #00bda5;
+  --color-lightPrimaryColor: #66D1C4;
   --color-bgColor: #f5f5f5;
   --color-textColor: #333333;
   --color-borderColor: #6c757d;

@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -28,6 +28,13 @@ const Footer = () => {
             className="text-[#0077B5]"
           >
             <FaLinkedin></FaLinkedin>
+          </a>
+          <a
+            href="mailto:najmul.nh.shaon@gmail.com"
+            target="_black"
+            className="text-[#0077B5]"
+          >
+            <FaRegEnvelope></FaRegEnvelope>
           </a>
         </div>
       </div>
