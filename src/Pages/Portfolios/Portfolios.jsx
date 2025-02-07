@@ -33,15 +33,15 @@ const Portfolios = () => {
 
         {/* *******************************  */}
         <div className="flex flex-col items-center text-center text-white">
-          <div className="flex gap-4 p-2 rounded-full shadow-lg shadow-primaryColor">
+          <div className="flex flex-wrap justify-center gap-3 p-3 rounded-full shadow-lg shadow-primaryColor">
             {tabs.map((tab) => (
               <button
                 key={tab.name}
                 onClick={() => setActive(tab.name)}
-                className={`px-6 py-3 flex items-center gap-2 rounded-full transition-all ${
+                className={`px-4 py-2 flex items-center gap-2 rounded-full text-sm sm:text-base transition-all ${
                   active === tab.name
-                    ? "bg-teal-500 text-white shadow-lg scale-110"
-                    : "bg-gray-600 hover:bg-teal-400 hover:text-black"
+                    ? "bg-teal-500 text-white shadow-lg scale-110 border border-borderColor"
+                    : "bg-bgColor border text-textColor border-borderColor hover:bg-primaryColor"
                 }`}
               >
                 {tab.icon} {tab.label}
