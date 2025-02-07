@@ -22,7 +22,7 @@ import {
 
 const Skills = () => {
   return (
-    <div className="mt-10 bg-bgColor">
+    <div className="bg-bgColor">
       <div className="">
         {/* my skill set icons  */}
         <div className="grid grid-cols-4 md:grid-cols-6 gap-6">

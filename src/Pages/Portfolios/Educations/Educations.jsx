@@ -1,80 +1,72 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { FaGraduationCap, FaLaptopCode } from "react-icons/fa";
+import { FaGraduationCap, FaBook } from "react-icons/fa";
 
-const Educations = () => {
-  const [activeStep, setActiveStep] = useState(null);
+export default function Educations() {
+  const [expanded, setExpanded] = useState(null);
 
-  const toggleStep = (step) => {
-    setActiveStep(activeStep === step ? null : step);
-  };
+  const educationData = [
+    {
+      id: "bsc",
+      title: "BSc in CSE",
+      icon: <FaGraduationCap className="text-blue-500" />,
+      institute: "Dhaka International University",
+      year: "2022-2025",
+      result: "Appeared",
+      details:
+        "Completed BSc in Computer Science & Engineering with expertise in software development and problem-solving.",
+    },
+    {
+      id: "diploma",
+      title: "Diploma in Computer Technology",
+      icon: <FaBook className="text-green-500" />,
+      institute: "Barisal Polytechnic Institute",
+      year: "2015-2019",
+      result: "3.32 out of 4.00",
+      details:
+        "Gained foundational knowledge in computer technology, networking, and system administration.",
+    },
+  ];
+
   return (
-    <div className="mt-10 flex justify-center overflow-x-hidden">
-      <div className="w-full max-w-2xl p-6 shadow-lg shadow-primaryColor rounded-xl bg-bgColor my-6">
-        <div className="flex flex-col items-center justify-center bg-gray-50 p-10 w-full rounded-xl">
-          {/* <h2 className="text-4xl font-bold text-gray-800 mb-10">
-            My Education Journey
-          </h2> */}
+    <div className="flex flex-col items-center text-center py-6">
+      <div className="w-full max-w-2xl">
+        {educationData.map((edu) => (
+          <div
+            key={edu.id}
+            className="bg-white p-4 rounded-2xl shadow-md mb-4 transition-all duration-300 cursor-pointer hover:shadow-lg"
+            onClick={() => setExpanded(expanded === edu.id ? null : edu.id)}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3 text-lg text-textColor font-semibold">
+                {edu.icon} {edu.title} ({edu.year})
+              </div>
+              <span className="text-gray-500">
+                {expanded === edu.id ? "▲" : "▼"}
+              </span>
+            </div>
 
-          <ul className="space-y-8 w-full">
-            {/* Step 1: BSc in CSE */}
-            <li className="relative">
-              <div
-                className={`w-2.5 h-2.5 rounded-full bg-${
-                  activeStep === "bsc" ? "blue" : "gray"
-                }-500 absolute left-0 -top-2`}
-              />
-              <button
-                onClick={() => toggleStep("bsc")}
-                className="flex items-center space-x-4 text-lg font-semibold text-gray-700 hover:text-blue-600 transition duration-300 pl-10"
-              >
-                <FaGraduationCap className="w-6 h-6 text-blue-500" />
-                <span>BSc in CSE</span>
-              </button>
-              {activeStep === "bsc" && (
-                <div className="bg-white p-6 rounded-lg shadow-lg mt-4 w-80 border-l-4 border-blue-500 ml-10">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Bachelor of Science in CSE
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Dhaka International University, 2021 - 2025
-                  </p>
-                  <p className="text-gray-600">Result: (Appeared)</p>
+            {expanded === edu.id && (
+              <>
+                <div className="flex justify-center items-center bg-bgColor py-4">
+                  <div className="card w-96 bg-gradient-to-br from-[#00BDA5] to-[#007F73] shadow-xl text-white p-6 rounded-2xl">
+                    <div className="card-body text-center">
+                      <h2 className="text-2xl font-bold">{edu.institute}</h2>
+                      <p className="text-lg mt-2">
+                        Graduation Year:{" "}
+                        <span className="font-semibold">{edu.year}</span>
+                      </p>
+                      <p className="text-lg mt-1">
+                        Result:{" "}
+                        <span className="font-semibold">{edu.result}</span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              )}
-            </li>
-
-            {/* Step 2: Diploma in Computer Technology */}
-            <li className="relative">
-              <div
-                className={`w-2.5 h-2.5 rounded-full bg-${
-                  activeStep === "diploma" ? "green" : "gray"
-                }-500 absolute left-0 -top-2`}
-              />
-              <button
-                onClick={() => toggleStep("diploma")}
-                className="flex items-center space-x-4 text-lg font-semibold text-gray-700 hover:text-blue-600 transition duration-300 pl-10"
-              >
-                <FaLaptopCode className="w-6 h-6 text-green-500" />
-                <span>Diploma in Computer Technology</span>
-              </button>
-              {activeStep === "diploma" && (
-                <div className="bg-white p-6 rounded-lg shadow-lg mt-4 w-80 border-l-4 border-green-500 ml-10">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Diploma in Computer Technology
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Barisal Polytechnic Institute, 2015 - 2019
-                  </p>
-                  <p className="text-gray-00">Result: 3.32 out of 4.00</p>
-                </div>
-              )}
-            </li>
-          </ul>
-        </div>
+              </>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
-};
-
-export default Educations;
+}
