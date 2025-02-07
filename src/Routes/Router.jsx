@@ -3,8 +3,9 @@ import RootLayout from "../Layouts/RootLayout";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
-import Skills from "../Pages/Skills/Skills";
+import Skills from "../Pages/Portfolios/Skills/Skills";
 import Portfolios from "../Pages/Portfolios/Portfolios";
+import Educations from "../Pages/Portfolios/Educations/Educations";
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ export const router = createBrowserRouter([
           },
           {
             path: "education",
-            element: <h3>Education</h3>,
+            element: <Educations></Educations>,
           },
           {
             path: "experience",

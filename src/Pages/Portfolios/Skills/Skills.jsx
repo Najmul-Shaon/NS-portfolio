@@ -23,7 +23,7 @@ import {
 const Skills = () => {
   return (
     <div className="mt-10 bg-bgColor">
-      <div className="max-w-screen-xl mx-auto px-4">
+      <div className="">
         {/* my skill set icons  */}
         <div className="grid grid-cols-4 md:grid-cols-6 gap-6">
           <p className="text-5xl border border-borderColor rounded-3xl hover:bg-primaryColor shadow-2xl shadow-primaryColor/30 flex justify-center p-4 transform transition-all duration-300 hover:scale-110 text-[#E34F26] hover:text-white">

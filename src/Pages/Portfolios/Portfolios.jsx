@@ -1,5 +1,5 @@
 import React from "react";
-import Skills from "../Skills/Skills";
+import Skills from "./Skills/Skills";
 import SectionTitle from "../../Components/SectionTitle";
 import { Link, Outlet } from "react-router-dom";
 
@@ -23,13 +23,13 @@ const Portfolios = () => {
           <Link to="/portfolio/skills">
             <button className="btn btn-dash btn-md md:btn-lg">Skills</button>
           </Link>
-          <Link to="/portfolio/education">
-            <button className="btn btn-dash btn-md md:btn-lg">Education</button>
-          </Link>
           <Link to="/portfolio/experience">
             <button className="btn btn-dash btn-md md:btn-lg">
               Experience
             </button>
+          </Link>
+          <Link to="/portfolio/education">
+            <button className="btn btn-dash btn-md md:btn-lg">Education</button>
           </Link>
         </div>
         <div>
