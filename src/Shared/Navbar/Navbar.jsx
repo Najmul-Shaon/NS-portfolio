@@ -8,7 +8,12 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/"
-          className="hover:bg-primaryColor hover:text-white text-lightPrimaryColor text-lg font-semibold"
+          // className="hover:bg-primaryColor hover:text-white text-primaryColor text-lg font-semibold"
+          className={({ isActive }) =>
+            isActive
+              ? "text-white text-lg font-semibold bg-primaryColor"
+              : "hover:bg-primaryColor hover:text-white text-primaryColor text-lg font-semibold"
+          }
         >
           Home
         </NavLink>
@@ -17,7 +22,11 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/portfolio"
-          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
+          className={({ isActive }) =>
+            isActive
+              ? "text-white text-lg font-semibold bg-primaryColor"
+              : "hover:bg-primaryColor hover:text-white text-primaryColor text-lg font-semibold"
+          }
         >
           Portfolio
         </NavLink>
@@ -25,7 +34,11 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/about"
-          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
+          className={({ isActive }) =>
+            isActive
+              ? "text-white text-lg font-semibold bg-primaryColor"
+              : "hover:bg-primaryColor hover:text-white text-primaryColor text-lg font-semibold"
+          }
         >
           About
         </NavLink>
@@ -49,7 +62,11 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/contact"
-          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
+          className={({ isActive }) =>
+            isActive
+              ? "text-white text-lg font-semibold bg-primaryColor"
+              : "hover:bg-primaryColor hover:text-white text-primaryColor text-lg font-semibold"
+          }
         >
           Contact
         </NavLink>
@@ -91,7 +108,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-2"
             >
               {navLinks}
             </ul>
@@ -104,7 +121,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1 space-x-2">{navLinks}</ul>
         </div>
         <div className="navbar-end">
           <Link

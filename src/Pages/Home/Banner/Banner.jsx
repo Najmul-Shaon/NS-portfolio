@@ -3,6 +3,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaRegEnvelope,
+  FaRegEye,
 } from "react-icons/fa";
 import authorImg from "../../../assets/Author_Img1.png";
 import Typewriter from "react-ts-typewriter";
@@ -72,13 +73,20 @@ const Banner = () => {
             <FaRegEnvelope></FaRegEnvelope>
           </a>
         </div>
-        <div className="">
+        <div className="space-x-2">
           <Link
             onClick={handleResume}
             className="btn bg-primaryColor rounded-2xl text-white border-borderColor"
           >
             <FaArrowDown className="text-lg"></FaArrowDown>{" "}
             <span className="text-lg">Resume</span>
+          </Link>
+          <Link
+            to="/portfolio"
+            className="btn rounded-2xl text-textColor hover:text-white hover:bg-primaryColor border border-borderColor"
+          >
+            <FaRegEye className="text-lg"></FaRegEye>{" "}
+            <span className="text-lg">See Projects</span>
           </Link>
         </div>
       </div>
