@@ -1,15 +1,19 @@
-import matchMateImg from "../../../assets/MatchMate/card2.png";
+import matchMateImg from "../../../assets/MatchMate/card3.png";
 import learnLoungeImg from "../../../assets/LearnLounge/home1.png";
 import crowdCubeImg from "../../../assets/CrowdCube/home1.png";
-import { FaGithub, FaNodeJs, FaReact, FaRegEye } from "react-icons/fa";
+import kindClothImg from "../../../assets/kindCloth/home1.png";
+import {
+  FaClipboardList,
+  FaGithub,
+  FaNodeJs,
+  FaReact,
+  FaRegEye,
+} from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { TbBracketsContainEnd, TbBracketsContainStart } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
-  const handleLink = (link) => {
-    window.open(link, "_blank");
-  };
-
   const projects = [
     {
       id: "matchMate",
@@ -68,6 +72,16 @@ const Projects = () => {
       server: "https://github.com/Najmul-Shaon/crowncube-server",
       live: "https://crowd-1342c.firebaseapp.com",
     },
+    {
+      id: "kindCloth",
+      projectName: "Kind Cloth",
+      projectImg: kindClothImg,
+      tech: [<FaReact className="text-[#61DBFB]" />],
+      details:
+        "A simple yet functional donation platform built with React. Users can make donations and view their donation details seamlessly. The intuitive interface ensures a smooth experience, making contributions effortless.",
+      client: "https://github.com/Najmul-Shaon/crowdcube-client",
+      live: "https://crowd-1342c.firebaseapp.com",
+    },
   ];
 
   return (
@@ -107,14 +121,15 @@ const Projects = () => {
             <div className="grid grid-cols-2 gap-4 mt-4">
               <a href={`${project.client}`} target="_blank">
                 <button className="btn w-full text-lg border border-borderColor hover:bg-primaryColor hover:text-white">
-                  <FaGithub /> Client Repo
+                  <FaGithub /> Client
                 </button>
               </a>
-              <a href={`${project.server}`} target="_blank">
+
+              <Link to={`/portfolio/project/details/${project.id}`}>
                 <button className="btn w-full text-lg border border-borderColor hover:bg-primaryColor hover:text-white">
-                  <FaGithub /> Server Repo
+                  <FaClipboardList /> Details
                 </button>
-              </a>
+              </Link>
 
               <a
                 href={`${project.live}`}
