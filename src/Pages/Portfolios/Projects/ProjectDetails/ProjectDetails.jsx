@@ -1,4 +1,11 @@
-import { FaGithub, FaNodeJs, FaReact, FaRegEye } from "react-icons/fa";
+import {
+  FaDotCircle,
+  FaGithub,
+  FaNodeJs,
+  FaReact,
+  FaRegEye,
+  FaRegHandPointRight,
+} from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import matchMateImg1 from "../../../../assets/MatchMate/card1.png";
 import matchMateImg2 from "../../../../assets/MatchMate/card2.png";
@@ -61,6 +68,33 @@ const ProjectDetails = () => {
       client: "https://github.com/Najmul-Shaon/Match-Mate-Client",
       server: "https://github.com/Najmul-Shaon/Match-Mate-Server",
       live: "https://matchmate-de063.firebaseapp.com",
+      challanges: [
+        {
+          title: "Ensuring Data Privacy and Security",
+          description:
+            "Protecting user data with encryption, authentication security, and compliance with privacy regulations was a major challenge.",
+        },
+        {
+          title: "User Experience (UX) and Interface Design",
+          description:
+            "Designing a user-friendly, visually appealing interface for diverse users required iterative improvements.",
+        },
+        {
+          title: "Scalability and Performance Optimization",
+          description:
+            "Handling a growing user base, optimizing database queries, and ensuring smooth performance under high traffic loads were key challenges.",
+        },
+        {
+          title: "Seamless Integration with Third-Party Services",
+          description:
+            "Integrating payment gateways, chat functionalities, and authentication providers required handling API dependencies and version updates.",
+        },
+        {
+          title: "Managing Development Timelines and Resource Allocation",
+          description:
+            "Balancing feature development, bug fixing, and testing within deadlines required effective project management and collaboration.",
+        },
+      ],
     },
     {
       id: "learnLounge",
@@ -85,6 +119,28 @@ const ProjectDetails = () => {
       client: "https://github.com/Najmul-Shaon/Learn-Lounge-Client",
       server: "https://github.com/Najmul-Shaon/Learn-Lounge-Server",
       live: "https://learn--lounge.web.app",
+      challanges: [
+        {
+          title: "Ensuring Real-Time Collaboration and Synchronization",
+          description:
+            "Implementing real-time interactions, live assignment evaluations, and peer feedback, required efficient WebSocket and database synchronization to prevent data inconsistencies.",
+        },
+        {
+          title: "Scalability and Performance Optimization",
+          description:
+            "Handling high concurrent user activity without compromising speed required optimization of server performance, database queries, and API response times.",
+        },
+        {
+          title: "User Experience (UX) and Accessibility",
+          description:
+            "Designing an intuitive and inclusive interface that accommodates students of varying technical proficiency while ensuring smooth cross-device compatibility was a challenge.",
+        },
+        {
+          title: "Managing Development Timelines and Feature Prioritization",
+          description:
+            "Balancing feature development, bug fixing, and user feedback within deadlines required effective project management and iterative testing.",
+        },
+      ],
     },
     {
       id: "crowdCube",
@@ -110,6 +166,23 @@ const ProjectDetails = () => {
       client: "https://github.com/Najmul-Shaon/crowdcube-client",
       server: "https://github.com/Najmul-Shaon/crowncube-server",
       live: "https://crowd-1342c.firebaseapp.com",
+      challanges: [
+        {
+          title: "Scalability and Performance Optimization",
+          description:
+            "Handling a growing number of users and donation transactions required optimizing database queries, API responses, and server infrastructure to ensure smooth performance.",
+        },
+        {
+          title: "Building an Intuitive User Interface",
+          description:
+            "Creating a seamless and easy-to-use interface for both campaign creators and donors required extensive UX research and iterative design improvements.",
+        },
+        {
+          title: "Bug Fixing & Maintenance",
+          description:
+            "Addressing software bugs, improving system stability, and ensuring seamless updates without disrupting user experience was a constant challenge.",
+        },
+      ],
     },
     {
       id: "kindCloth",
@@ -118,8 +191,45 @@ const ProjectDetails = () => {
       tech: [<FaReact className="text-[#61DBFB]" />],
       details:
         "A simple yet functional donation platform built with React. Users can make donations and view their donation details seamlessly. The intuitive interface ensures a smooth experience, making contributions effortless.",
-      client: "https://github.com/Najmul-Shaon/crowdcube-client",
-      live: "https://crowd-1342c.firebaseapp.com",
+      client: "https://github.com/Najmul-Shaon/Kind-Cloth",
+      live: "https://kind-cloth.web.app/",
+      challanges: [
+        {
+          title: "Dynamic Campaign Management",
+          description:
+            "Handling the creation, updating, and deletion of campaigns while ensuring real-time updates required efficient state management and database synchronization.",
+        },
+        {
+          title: "User Authentication Control",
+          description:
+            "Ensuring that users could only access and manage their own campaigns and donations required implementing secure authentication.",
+        },
+        {
+          title: "Efficient State Management",
+          description:
+            "Managing multiple campaign-related states (all campaigns, user-specific campaigns, and donations) without performance issues required optimizing API calls.",
+        },
+        {
+          title: "Real-Time Data Updates",
+          description:
+            "Ensuring users see the latest campaign and donation information without manual refresh required.",
+        },
+        {
+          title: "Bug Fixing and Debugging",
+          description:
+            "Resolving issues related to campaign creation, incorrect data rendering, and payment failures required extensive debugging and error handling.",
+        },
+        {
+          title: "Mobile Responsiveness and UI Optimization",
+          description:
+            "Designing an intuitive and visually appealing interface that works seamlessly across different screen sizes required thorough testing and CSS optimization.",
+        },
+        {
+          title: "Time Management and Feature Prioritization",
+          description:
+            "Balancing core features like campaign creation and donation tracking while maintaining a stable and scalable codebase required effective project planning.",
+        },
+      ],
     },
   ];
 
@@ -170,20 +280,42 @@ const ProjectDetails = () => {
           </button>
         </a>
       </div>
-      <div className="space-y-4">
-        <h3 className="text-2xl font-semibold text-textColor">Tech Stack:</h3>
-        <div className="flex gap-6">
-          {singleProject[0]?.tech.map((singleIcon, i) => (
-            <p className="text-6xl" key={i}>
-              {singleIcon}
-            </p>
-          ))}
+      <div className="space-y-12">
+        <div>
+          <h3 className="text-2xl font-semibold text-textColor">Tech Stack:</h3>
+          <div className="flex gap-6 mt-4">
+            {singleProject[0]?.tech.map((singleIcon, i) => (
+              <p className="text-6xl" key={i}>
+                {singleIcon}
+              </p>
+            ))}
+          </div>
         </div>
         <div className="space-y-2">
           <h3 className="font-semibold text-2xl text-textColor">
             Brief Description
           </h3>
-          <p className="text-textColor text-lg text-justify">{singleProject[0].details}</p>
+          <p className="text-textColor text-lg text-justify">
+            {singleProject[0].details}
+          </p>
+        </div>
+        {/* challenge section  */}
+        <div className="space-y-2.5">
+          <h3 className="text-2xl font-semibold text-textColor">Challanges</h3>
+          {singleProject[0].challanges.map((singleChallange) => (
+            <div>
+              <h4 className="text-lg font-semibold text-textColor flex gap-2 items-center">
+                <span className="text-primaryColor">
+                  <FaDotCircle></FaDotCircle>{" "}
+                </span>
+
+                {singleChallange.title}
+              </h4>
+              <p className="text-textColor text-lg text-justify">
+                {singleChallange.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
