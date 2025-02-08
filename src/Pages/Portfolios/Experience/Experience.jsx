@@ -39,8 +39,8 @@ const Experience = () => {
   return (
     <div className="flex flex-col items-center text-center py-6">
       <Helmet>
-              <title>Najmul | Experience</title>
-            </Helmet>
+        <title>Najmul | Experience</title>
+      </Helmet>
       <div className="w-full max-w-2xl">
         {JobData.map((job) => (
           <div
@@ -60,7 +60,7 @@ const Experience = () => {
             {expanded === job.id && (
               <>
                 <div className="flex justify-center items-center bg-bgColor py-4">
-                  <div className="card w-96 bg-gradient-to-br from-[#00BDA5] to-[#007F73] shadow-xl text-white p-2 md:p-4 lg:p-6 rounded-2xl">
+                  <div className="card w-96 gradientColor shadow-xl text-white p-2 md:p-4 lg:p-6 rounded-2xl">
                     <div className="card-body text-center">
                       <h2 className="text-2xl font-bold">{job.institute}</h2>
                       <p className="text-lg mt-2">
