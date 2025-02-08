@@ -21,7 +21,7 @@ const Portfolios = () => {
     { name: "education", icon: <FaGraduationCap />, label: "Education" },
   ];
   return (
-    <div className="mt-20 bg-bgColor">
+    <div className="mt-20 bg-bgColor mb-12">
       <div className="max-w-screen-xl mx-auto px-4 py-12">
         <SectionTitle header={"Portfolio Showcase"}></SectionTitle>
 
@@ -49,54 +49,13 @@ const Portfolios = () => {
             ))}
           </div>
 
-          <div className="mt-8 p-6 rounded-xl shadow-lg w-full">
+          <div className="mt-8 p-6 rounded-xl shadow-lg w-full bg-primaryColor/5">
             {active === "projects" && <Projects></Projects>}
             {active === "skills" && <Skills></Skills>}
             {active === "experience" && <Experience></Experience>}
             {active === "education" && <Educations></Educations>}
           </div>
         </div>
-        {/* *******************************  */}
-
-        {/* portfolio navigation  */}
-        {/* <div className="flex justify-evenly border py-4 rounded-2xl shadow-xl shadow-primaryColor/20">
-          <Link to="/portfolio/projects">
-            <button className="btn btn-dash btn-md md:btn-lg">Projects</button>
-          </Link>
-          <Link to="/portfolio/skills">
-            <button className="btn btn-dash btn-md md:btn-lg">Skills</button>
-          </Link>
-          <Link to="/portfolio/experience">
-            <button className="btn btn-dash btn-md md:btn-lg">
-              Experience
-            </button>
-          </Link>
-          <Link to="/portfolio/education">
-            <button className="btn btn-dash btn-md md:btn-lg">Education</button>
-          </Link>
-        </div> */}
-        {/* ****************  */}
-        {/* <div className="grid grid-cols-4 justify-evenly border rounded-2xl shadow-xl shadow-primaryColor/20 py-4 gap-3">
-          <Link to="/portfolio/projects">
-            <p className=" text-center text-sm md:text-lg">&lt;Projects/&gt;</p>
-          </Link>
-          <Link to="/portfolio/skills">
-            <p className=" text-center text-sm md:text-lg">&lt;Skills/&gt;</p>
-          </Link>
-          <Link to="/portfolio/experience">
-            <p className=" text-center text-sm md:text-lg">
-              &lt;Experience/&gt;
-            </p>
-          </Link>
-          <Link to="/portfolio/education">
-            <p className=" text-center text-sm md:text-lg">
-              &lt;Education/&gt;
-            </p>
-          </Link>
-        </div> */}
-        {/* <div>
-          <Outlet></Outlet>
-        </div> */}
       </div>
     </div>
   );
