@@ -1,7 +1,7 @@
+import { Helmet } from "react-helmet-async";
 import { DiMongodb } from "react-icons/di";
 import {
   FaCss3,
-  FaGit,
   FaGithub,
   FaGitSquare,
   FaHtml5,
@@ -17,12 +17,14 @@ import {
   SiNextdotjs,
   SiPostman,
   SiVercel,
-  SiVite,
 } from "react-icons/si";
 
 const Skills = () => {
   return (
     <div className="bg-bgColor">
+      <Helmet>
+        <title>Najmul | Skills</title>
+      </Helmet>
       <div className="">
         {/* my skill set icons  */}
         <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-6">

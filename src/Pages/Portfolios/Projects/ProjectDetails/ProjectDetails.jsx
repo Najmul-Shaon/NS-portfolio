@@ -4,7 +4,6 @@ import {
   FaNodeJs,
   FaReact,
   FaRegEye,
-  FaRegHandPointRight,
 } from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import matchMateImg1 from "../../../../assets/MatchMate/card1.png";

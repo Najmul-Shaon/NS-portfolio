@@ -76,14 +76,14 @@ const Banner = () => {
         <div className="space-x-2">
           <Link
             onClick={handleResume}
-            className="btn bg-primaryColor rounded-2xl text-white border-borderColor"
+            className="btn bg-primaryColor rounded-2xl text-white border-borderColor shadow-2xl shadow-primaryColor"
           >
             <FaArrowDown className="text-lg"></FaArrowDown>{" "}
             <span className="text-lg">Resume</span>
           </Link>
           <Link
             to="/portfolio"
-            className="btn rounded-2xl text-textColor hover:text-white hover:bg-primaryColor border border-borderColor"
+            className="btn rounded-2xl text-textColor hover:text-white hover:bg-primaryColor border border-borderColor shadow-2xl shadow-primaryColor"
           >
             <FaRegEye className="text-lg"></FaRegEye>{" "}
             <span className="text-lg">See Projects</span>

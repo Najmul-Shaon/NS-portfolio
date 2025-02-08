@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import { FaArrowDown } from "react-icons/fa";
 
 const Navbar = () => {
@@ -8,7 +7,6 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/"
-          // className="hover:bg-primaryColor hover:text-white text-primaryColor text-lg font-semibold"
           className={({ isActive }) =>
             isActive
               ? "text-white text-lg font-semibold bg-primaryColor"
@@ -43,22 +41,7 @@ const Navbar = () => {
           About
         </NavLink>
       </li>
-      {/* <li>
-        <NavLink
-          to="/skills"
-          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
-        >
-          Skill
-        </NavLink>
-      </li> */}
-      {/* <li>
-        <NavLink
-          to="/projects"
-          className="hover:bg-primaryColor hover:text-white text-lg font-semibold text-lightPrimaryColor"
-        >
-          Projects
-        </NavLink>
-      </li> */}
+
       <li>
         <NavLink
           to="/contact"

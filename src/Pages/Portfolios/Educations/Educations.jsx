@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaGraduationCap, FaBook } from "react-icons/fa";
 
 export default function Educations() {
@@ -29,6 +30,9 @@ export default function Educations() {
 
   return (
     <div className="flex flex-col items-center text-center py-6">
+      <Helmet>
+        <title>Najmul | Education</title>
+      </Helmet>
       <div className="w-full max-w-2xl">
         {educationData.map((edu) => (
           <div

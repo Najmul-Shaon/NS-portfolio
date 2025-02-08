@@ -1,9 +1,13 @@
 import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 import SectionTitle from "../../Components/SectionTitle";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
-    <div className="bg-bgColor mt-20">
+    <div className="bg-bgColor mt-18">
+      <Helmet>
+        <title>Najmul | About</title>
+      </Helmet>
       <div className="max-w-screen-xl mx-auto px-4 py-8">
         <SectionTitle header={"About Me"}></SectionTitle>
         <div className="mt-8">
@@ -38,24 +42,6 @@ const About = () => {
         </div>
         {/* social icons  */}
         <div className="flex items-center gap-6 text-3xl justify-center mt-8">
-          {/* <a
-            href="https://github.com/Najmul-Shaon"
-            target="_blank"
-            className="text-[#171515]"
-          >
-            <FaGithub></FaGithub>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/najmul-hasan-75a096205/"
-            target="_black"
-            className="text-[#0077B5]"
-          >
-            <FaLinkedin></FaLinkedin>
-          </a>
-          <a href="mailto:najmul.nh.shaon@gmail.com" className="text-4xl">
-            <FaRegEnvelope />
-          </a> */}
           <a href="https://github.com/Najmul-Shaon">
             <button className="bg-transparent border-2 border-borderColor text-[#171515] px-4 py-2 rounded-lg text-2xl font-bold hover:bg-primaryColor hover:border-borderColor transition-all duration-300 transform hover:scale-105">
               <FaGithub className="inline-block mr-2 text-3xl" /> Github

@@ -21,7 +21,7 @@ const Portfolios = () => {
     { name: "education", icon: <FaGraduationCap />, label: "Education" },
   ];
   return (
-    <div className="mt-20 bg-bgColor mb-12">
+    <div className="mt-18 bg-bgColor mb-12">
       <div className="max-w-screen-xl mx-auto px-4 py-12">
         <SectionTitle header={"Portfolio Showcase"}></SectionTitle>
 

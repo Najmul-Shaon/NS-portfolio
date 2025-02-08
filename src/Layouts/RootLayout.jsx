@@ -4,9 +4,9 @@ import Footer from "../Shared/Footer/Footer";
 
 const RootLayout = () => {
   return (
-    <div className="font-dosis">
+    <div className="font-dosis scroll-smooth">
       <Navbar></Navbar>
-      <div className="min-h-[calc(100vh-64px)]">
+      <div className="min-h-[calc(100vh-138px)]">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

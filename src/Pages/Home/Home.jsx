@@ -1,16 +1,14 @@
-// import Footer from "../../Shared/Footer/Footer";
-// import Navbar from "../../Shared/Navbar/Navbar";
-import About from "../About/About";
+import { Helmet } from "react-helmet-async";
 import Banner from "./Banner/Banner";
 
 const Home = () => {
   return (
     <div>
-      {/* <Navbar></Navbar> */}
+      <Helmet>
+        <title>Najmul | Home</title>
+      </Helmet>
       <div className="mt-18"></div>
       <Banner></Banner>
-      {/* <About></About> */}
-      {/* <Footer></Footer> */}
     </div>
   );
 };

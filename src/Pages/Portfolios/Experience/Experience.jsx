@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { GiGears } from "react-icons/gi";
 import { IoIosDesktop } from "react-icons/io";
 
@@ -37,6 +38,9 @@ const Experience = () => {
   ];
   return (
     <div className="flex flex-col items-center text-center py-6">
+      <Helmet>
+              <title>Najmul | Experience</title>
+            </Helmet>
       <div className="w-full max-w-2xl">
         {JobData.map((job) => (
           <div

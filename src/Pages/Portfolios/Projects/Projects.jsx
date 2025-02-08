@@ -12,6 +12,7 @@ import {
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { TbBracketsContainEnd, TbBracketsContainStart } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Projects = () => {
   const projects = [
@@ -86,6 +87,9 @@ const Projects = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Helmet>
+        <title>Najmul | Projects</title>
+      </Helmet>
       {projects.map((project) => (
         <div
           key={project.id}

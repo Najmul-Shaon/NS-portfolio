@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 import Swal from "sweetalert2";
 import SectionTitle from "../../Components/SectionTitle";
-import { CiLocationOn } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const {
@@ -35,6 +35,9 @@ const Contact = () => {
 
   return (
     <div className="mt-20 max-w-screen-xl mx-auto px-4">
+      <Helmet>
+        <title>Najmul | Contact</title>
+      </Helmet>
       <SectionTitle header={"Contact Me"}></SectionTitle>
       {/* contact info  */}
       <div className="max-w-3xl mx-auto">
