@@ -23,17 +23,10 @@ Border/Muted Color 🔘 #6C757D → (Muted Gray) – Used for subtle dividers an
 
 .gradientColor {
   /* main   */
-  /* background-image: linear-gradient(to bottom right, #00BDA5, #007F73);  */
+  background-image: linear-gradient(to bottom right, #00bda5, #007f73);
 
   /* practice 2 */
-  background-image: linear-gradient(to bottom right, #003333, #007766);
-  /* practice 3  */
-  /* background-image: linear-gradient(to bottom right, #1A1A1A  , #5E2BFF ); */
-  /* practice 4  */
-  /* background-image: linear-gradient(to bottom right, #001F3F, #005F73); */
-  /* practice 5  */
-  /* background-image: linear-gradient(to bottom right, #020617, #2563EB); */
-
+  /* background-image: linear-gradient(to bottom right, #003333, #007766); */
 }
 
 /* 

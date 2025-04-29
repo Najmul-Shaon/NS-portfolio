@@ -12,7 +12,9 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   const handleResume = () => {
     const dwUrl =
-      "https://drive.google.com/uc?export=download&id=1zAzgBeG8yRvOR1N4jEMKoIPeIUz8it_A";
+      // "https://drive.google.com/uc?export=download&id=1zAzgBeG8yRvOR1N4jEMKoIPeIUz8it_A";
+      "https://drive.google.com/uc?export=download&id=1IwwpulNnCb19qO3aw-iQ3zIxonCnGH9g";
+    // "https://drive.google.com/file/d/1IwwpulNnCb19qO3aw-iQ3zIxonCnGH9g/view?usp=drive_link";
 
     const link = document.createElement("a");
     link.href = dwUrl;
@@ -30,15 +32,20 @@ const Banner = () => {
           <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold">
             Najmul Shaon, a
           </h1>
-          <h2 className="text-2xl md:text-4xl lg:text-6xl text-primaryColor">
+          <h2 className="text-2xl md:text-4xl lg:text-6xl text-primaryColor leading-18">
             <Typewriter
-              text={["Web Developer", "Frontend Developer"]}
+              text={[
+                "Web Developer",
+                "Frontend Developer",
+                "MERN Stack Developer",
+                "Full Stack Developer",
+              ]}
               loop={true}
               speed={200}
             />
           </h2>
         </div>
-        <p className="text-textColor text-justify">
+        <p className="text-textColor text-justify leading-7">
           As a MERN Stack Developer, I transform ideas into digital
           masterpieces. With JavaScript at the core, I use React to weave
           powerful, responsive interfaces and MongoDB to store the heart of

@@ -59,7 +59,7 @@ const Navbar = () => {
 
   const handleResume = () => {
     const dwUrl =
-      "https://drive.google.com/uc?export=download&id=1zAzgBeG8yRvOR1N4jEMKoIPeIUz8it_A";
+      "https://drive.google.com/uc?export=download&id=1IwwpulNnCb19qO3aw-iQ3zIxonCnGH9g";
 
     const link = document.createElement("a");
     link.href = dwUrl;

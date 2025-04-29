@@ -204,7 +204,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full py-3 mt-4 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 transition-all"
+            className="w-full py-3 mt-4 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 transition-all cursor-pointer"
           >
             Send Message
           </button>
@@ -219,20 +219,20 @@ const Contact = () => {
         {/* social icons  */}
         <div className="flex items-center gap-6 justify-center mt-8">
           <a href="https://github.com/Najmul-Shaon">
-            <button className="bg-transparent border-2 border-borderColor text-[#171515] px-4 py-2 rounded-lg text-xl md:text-2xl font-bold hover:bg-primaryColor hover:border-borderColor transition-all duration-300 transform hover:scale-105">
+            <button className="bg-transparent border-2 border-borderColor text-[#171515] px-4 py-2 rounded-lg text-xl md:text-2xl font-bold hover:bg-primaryColor hover:border-borderColor transition-all duration-300 transform hover:scale-105 cursor-pointer">
               <FaGithub className="inline-block mr-2 text-xl md:text-3xl" />{" "}
               Github
             </button>
           </a>
           <a href="mailto:najmul.nh.shaon@gmail.com">
-            <button className="bg-transparent border-2 border-borderColor text-teal-900 px-4 py-2 rounded-lg text-xl md:text-2xl font-bold hover:bg-primaryColor hover:border-borderColor hover:text-black transition-all duration-300 transform hover:scale-105">
+            <button className="bg-transparent border-2 border-borderColor text-teal-900 px-4 py-2 rounded-lg text-xl md:text-2xl font-bold hover:bg-primaryColor hover:border-borderColor hover:text-black transition-all duration-300 transform hover:scale-105 cursor-pointer">
               <FaRegEnvelope className="inline-block mr-2 text-xl md:text-3xl" />{" "}
               <span className="text-black">Mail</span>
             </button>
           </a>
 
           <a href="https://www.linkedin.com/in/najmul-hasan-75a096205">
-            <button className="bg-transparent border-2 border-borderColor text-[#0077B5] px-4 py-2 rounded-lg text-xl md:text-2xl font-bold hover:bg-primaryColor hover:border-borderColor hover:text-black transition-all duration-300 transform hover:scale-105">
+            <button className="bg-transparent border-2 border-borderColor text-[#0077B5] px-4 py-2 rounded-lg text-xl md:text-2xl font-bold hover:bg-primaryColor hover:border-borderColor hover:text-black transition-all duration-300 transform hover:scale-105 cursor-pointer">
               <FaLinkedin className="inline-block mr-2 text-xl md:text-3xl" />{" "}
               Linkedin
             </button>

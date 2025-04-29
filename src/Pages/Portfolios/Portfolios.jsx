@@ -38,7 +38,7 @@ const Portfolios = () => {
               <button
                 key={tab.name}
                 onClick={() => setActive(tab.name)}
-                className={`px-4 py-2 flex items-center gap-2 rounded-full text-sm sm:text-base transition-all ${
+                className={`px-4 py-2 flex items-center gap-2 rounded-full text-sm sm:text-base transition-all cursor-pointer hover:text-white ${
                   active === tab.name
                     ? "bg-teal-500 text-white shadow-lg scale-110 border border-borderColor"
                     : "bg-bgColor border text-textColor border-borderColor hover:bg-primaryColor"
